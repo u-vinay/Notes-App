@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap');
+*,
+*::after,
+*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+img{
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+input, button, textarea{
+  font-family: 'Nunito', sans-serif;
+}
+:root{
+  --BODY-COLOR: #E1E5E2 ;
+  --HEADER-BGCOLOR: #002f38;
+  --HEADER-COLOR: #E1E5E2;
+  --NOTE-BGCOLOR:#002f38;
+  --NOTE-COLOR: #E1E5E2;
+  --BUTTON-BGCOLOR: #E1E5E2;
+  --BUTTON-COLOR: #002f38;
+  --BUTTON-HOVER-BGCOLOR: #E1E5E2;
+  --BUTTON-HOVER-COLOR: #002f38;
+  --DROP-SHADOW: drop-shadow(0 0 1em #08363F);
+  --DROP-SHADOW-DARK: drop-shadow(0 0 0.3em #08363F );
+}
+@media (prefers-color-scheme: dark) {
+    :root{
+      --BODY-COLOR: #A5A5A5;
+      --HEADER-BGCOLOR: #242424;
+      --HEADER-COLOR: #A5A5A5;
+      --NOTE-BGCOLOR: #242424;
+      --NOTE-COLOR: #A5A5A5;
+      --BUTTON-BGCOLOR: #A5A5A5;
+      --BUTTON-COLOR: #242424;
+      --BUTTON-HOVER-BGCOLOR: #242424;
+      --BUTTON-HOVER-COLOR: #A5A5A5;
+      --DROP-SHADOW: drop-shadow(0 0 1em #242424 );
+      --DROP-SHADOW-DARK: drop-shadow(0 0 0.3em #A5A5A5 );
+    }
+}
+body {
+  background: var(--BODY-COLOR);
+  font-family: 'Nunito', sans-serif;
+}
+
+header {
+  background-color: var(--HEADER-BGCOLOR);
+  padding: 16px 32px;
+  box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+header h1 {
+  color: var(--HEADER-COLOR);
+  font-family: 'Nunito', sans-serif;
+  font-weight: 800
+;
+}
+
+footer {
+  background-color: var(--HEADER-BGCOLOR);
+  position: fixed;
+  text-align: left;
+  bottom: 0;
+  padding: 16px 32px;
+  width: 100%;
+  height: 2.5rem;
+  color: var(--HEADER-COLOR);
+  font-weight: 700;
+  font-size: 1rem;
+}
+.note {
+
+  border-radius: 7px;
+  box-shadow: 0 1px 5px #333;
+  padding: 10px;
+  width: 240px;
+  margin: 16px;
+  float: left;
+  background: var(--NOTE-BGCOLOR);
+  color: var(--NOTE-COLOR);
+
+}
+.note:hover{
+  filter: var(--DROP-SHADOW);
+}
+.note h1 {
+  font-size: 1.1em;
+  margin-bottom: 6px;
+}
+.note p {
+  font-size: 1.1em;
+  margin-bottom: 10px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+button {
+  position: relative;
+  float: right;
+  margin-right: 10px;
+  color: var(--BUTTON-COLOR);
+  border: none;
+  width: 72px;
+  height: 36px;
+  cursor: pointer;
+  outline: none;
+  background-color: var(--BUTTON-BGCOLOR);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  border-radius: 10%;
+  font-weight: 800;
+}
+::placeholder{
+  color: var(--NOTE-COLOR);
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+button:hover{
+  background: var(--BUTTON-HOVER-BGCOLOR);
+  color:var(--BUTTON-HOVER-COLOR);
+  filter: var(--DROP-SHADOW-DARK);
+}
+form {
+  position: relative;
+  width: 480px;
+  margin: 30px auto 20px auto;
+  background: var(--NOTE-BGCOLOR);
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 1px 5px #333;
+  border:var(--NOTE-COLOR);
+}
+form:hover{
+  filter: var(--DROP-SHADOW);
+}
+form input,
+form textarea {
+  width: 100%;
+  border: none;
+  padding: 4px;
+  outline: none;
+  font-size: 1.2em;
+  font-family: 'Nunito', sans-serif;
+  resize: none;
+  background: transparent;
+  color: var(--NOTE-COLOR);
+  font-weight: bold;
+}
+form button {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+}
+
+@media (max-width: 425px) {
+  form{
+    width: 95%;
+  }
+}
